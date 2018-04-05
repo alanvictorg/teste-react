@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import '../styles/App.css';
 import axios from 'axios';
 import {
-    Card, CardImg, CardText, CardBody, Media, CardTitle, CardSubtitle, Button,
+    Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button,
     Container, Row, Col, Modal, ModalHeader, ModalBody, ModalFooter
 } from 'reactstrap';
 
@@ -83,7 +83,7 @@ class App extends Component {
                                         <ModalBody>
                                             <Row>
                                                 <Col sm="12" md={{size: 8, offset: 2}}>
-                                                    <img width='100%' src={this.state.image}/>
+                                                    <img width='100%' src={this.state.image} alt={this.state.name}/>
                                                 </Col>
                                             </Row>
                                             <b>Id: </b>{this.state.id}<br/>
