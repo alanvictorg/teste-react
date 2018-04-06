@@ -7,6 +7,10 @@
   height: 80px;
 }
 
+body {
+  background: linear-gradient(to bottom right, rgba(255, 244, 76, 0.76), white) !important; ;
+}
+
 .App-header {
   background-color: #222;
   height: 150px;
@@ -28,5 +32,18 @@
 }
 
 .card {
+    margin-top: 20px;
+}
+
+.filter {
+  float: right;
+}
+.filter-label {
+  float: right;
+  padding-right: 10px ;
+  font-family: sans-serif;
+}
+
+.topo {
     margin-top: 20px;
 }
