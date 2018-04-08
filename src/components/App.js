@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import '../styles/App.css';
-import axios from 'axios';
 import {
     Container, Row, Col
 } from 'reactstrap';
 import PersonsList from "./PersonsList";
+import axios from "axios/index";
 
 
 class App extends Component {
@@ -13,7 +13,7 @@ class App extends Component {
         super(props);
         this.state = {
             modal: false,
-            search: ''
+            search: '',
         };
 
     }
@@ -21,6 +21,7 @@ class App extends Component {
     updateSearch(event) {
         this.setState({search: event.target.value.substr(0, 20)});
     }
+
 
     render() {
 
@@ -31,14 +32,15 @@ class App extends Component {
                         <input type="text" className="filter" value={this.state.search}
                                onChange={this.updateSearch.bind(this)}/>
                         <label className="filter-label">Filter by name: </label>
-
                     </Col>
                 </Row>
 
                 <PersonsList search={this.state.search}/>
-            </Container>
-    );
-    }
-    }
 
-    export default App;
+
+            </Container>
+        );
+    }
+}
+
+export default App;
